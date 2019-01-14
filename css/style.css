@@ -101,17 +101,13 @@ nav {
 }
 
 
-/* Since we'll have the "ul li" "float:left"
- * we need to add a clear after the container. */
-
 nav:after {
 	content:"";
 	display:table;
 	clear:both;
 }
 
-/* Removing padding, margin and "list-style" from the "ul",
- * and adding "position:reltive" */
+
 nav ul {
 	float: right;
 	padding:0;
@@ -120,14 +116,13 @@ nav ul {
 	position: relative;
 	}
 	
-/* Positioning the navigation items inline */
+
 nav ul li {
 	margin: 0px;
 	display:inline-block;
 	float: left;
 	}
 
-/* Styling the links */
 nav a {
     color: #ddd;
     text-transform: capitalize;
@@ -148,12 +143,9 @@ nav a:hover {
 	color: #fff;
 }
 
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
 nav ul ul {
 	display: none;
 	position: absolute; 
-	/* has to be the same number as the "line-height" of "nav a" */
 	top: 30px; 
     background: #fff;
     padding: 10px;
@@ -177,10 +169,6 @@ nav ul ul li a {
     display: block;
 }
 
-/* Second, Third and more Tiers	
- * We move the 2nd and 3rd etc tier dropdowns to the left
- * by the amount of the width of the first tier.
-*/
 nav ul ul ul li {
 	position: relative;
 	top:-60px;
