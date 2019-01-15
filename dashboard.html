@@ -19,17 +19,16 @@
     <nav class="py-4 d-lg-flex">
       <div id="logo">
         <h1> <a href="index.html"><span class="fa fa-clone"></span> Mail Room Services</a></h1>
-        </div>
-        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-       <input type="checkbox" id="drop" />
-       <ul class="menu mt-md-2 ml-auto">
-         <li class="mr-lg-4 mr-2"><a href="index.html">Home</a></li>
-         <li class="mr-lg-4 mr-2"><a href="#about">About Us</a></li>
-          <li class="mr-lg-4 mr-2 active"><a href="dashboard.html">Dashboard</a></li>
-        </ul>
-     </nav>
-  </div>
-</header>
+      </div>
+      <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+      <input type="checkbox" id="drop" />
+      <ul class="menu mt-md-2 ml-auto">
+        <li class="mr-lg-4 mr-2"><a href="index.html">Home</a></li>
+        <li class="mr-lg-4 mr-2"><a href="#about">About Us</a></li>
+        <li class="mr-lg-4 mr-2 active"><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
 <section class="banner pvt-banner" id="dashboard">
   <div class="container">
     <div class="banner-text">
@@ -46,7 +45,9 @@
   <h2>Dashboard</h2>
   <h4>Details about the packages</h4>
   <div class="add">
-    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Add</button><br /><br /></div>
+    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Add</button><br /><br />
+    <button type="button"class="btn btn-primary" onclick="deletefunction()">Remove</button>
+</div>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -61,10 +62,10 @@
           <input type="text" class="form-control" id="validationDefault01" placeholder="Name" required="">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="validationDefault02" placeholder="Email Id" required="">
+          <input type="email" class="form-control" id="validationDefault02" placeholder="Email Id" required="">
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" id="validationDefault03" placeholder="Package Id" required="">
+          <input type="text" class="form-control" id="validationDefault03" placeholder="Package Id" required="">
         </div>
 
         <div class="form-group">
@@ -74,10 +75,10 @@
           <input type="text" class="form-control" id="validationDefault05" placeholder="Courier Name" required="">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="password1" placeholder="Cash/Online Payment" required="">
+          <input type="text" class="form-control" id="validationDefault06" placeholder="Cash/Online Payment" required="">
         </div>
         <div class="modal-footer">
-           <button type="submit" class="btn btn-success submit">Add</button>
+          <button type="button"class="btn btn-primary" onclick="myFunction()">Add</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -85,11 +86,11 @@
     </div>
   </div>
   
-</div>     
-  <table class="table table-striped">
+</div> 
+<div class="container-fluid" >  
+  <table class="table table-hover">
     <thead>
       <tr>
-        <th>Date</th>
         <th>Name</th>
         <th>Email</th>
         <th>Package Id</th>
@@ -98,18 +99,42 @@
         <th>Cash/OnlinePayment</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-       
-      </tr>
-      <tr>
-        
-      </tr>
-      <tr>
-       
-      </tr>
+    <tbody id="myTable">
     </tbody>
   </table>
 </div>
+</div>
+<script>
+  function myFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var name =document.getElementById("validationDefault01").value;
+  var emailid = document.getElementById("validationDefault02").value;
+  var packageid = document.getElementById("validationDefault03").value;
+  var rollno = document.getElementById("validationDefault04").value;
+  var couriername = document.getElementById("validationDefault05").value;
+  var payment = document.getElementById("validationDefault06").value;
+  cell1.innerHTML = name;
+  cell2.innerHTML = emailid;
+  cell3.innerHTML = packageid;
+  cell4.innerHTML = rollno;
+  cell5.innerHTML = couriername;
+  cell6.innerHTML = payment;
+}
+function deletefunction(){
+  document.getElementById(validationDefault01).value= "";
+  document.getElementById(validationDefault02).value= "";
+  document.getElementById(validationDefault03).value= "";
+  document.getElementById(validationDefault04).value= "";
+  document.getElementById(validationDefault05).value= "";
+  document.getElementById(validationDefault06).value= "";
+}
+</script>
 </body>
 </html>
