@@ -1094,5 +1094,10 @@ a.move-top span {
 		letter-spacing: 1px;
 	}
 }
-
+.container h2{
+    margin-top:40px;
+}
+.container .add{
+    float:right;
+}
 /*-- //Responsive design --*/
