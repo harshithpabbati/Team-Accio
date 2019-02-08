@@ -1,0 +1,1103 @@
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+	font-family: 'Rosario', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+	font-family: 'Rosario', sans-serif;
+}
+
+body img {
+    max-width: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+	color: #323648;
+}
+li {
+    list-style-type: none;
+}
+p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    color: #707579;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-- header --*/
+
+header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+}
+
+
+#logo a {
+	float: left;
+    font-size: .8em;
+    display: initial;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 0;
+    border: none;
+}
+#logo a span.fa {
+    color: #03A9F4;
+}
+
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	}
+
+nav a {
+    color: #ddd;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-left: 0;
+    padding-right: 0;
+	padding: 10px 0;
+}
+
+
+nav ul li ul li:hover { background: #f8f9fa; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	color: #fff;
+}
+.menu li.active  a{ 
+	color: #fff;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 30px; 
+    background: #fff;
+    padding: 10px;
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+nav ul ul li a {
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+}
+
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+.login-icon a {
+    background: #03A9F4;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 991px) {
+
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+	.menu li.active a {
+		color: #03A9F4;
+	}
+	nav {
+		margin: 0;
+	}
+	nav a {
+		color: #333;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		padding: 5px 15px;
+		font-size: 20px;
+		text-decoration: none;
+		border: none;
+		float: right;
+		color: ;
+		background-color: #fff;
+		color: #03A9F4;
+	}
+	.menu .toggle {
+		float: none;
+		text-align: center;
+		margin: auto;
+		width: 30%;
+		padding: 5px;
+		font-weight: normal;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+
+	.toggle:hover {
+		color:#333;
+		background-color: #fff;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+		background: #fff;
+		padding: 15px 0;
+		width:100%;
+		text-align: center;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		padding: 7px 0;
+		}
+	nav a{
+		padding: 5px 0;
+	}
+	nav a:hover {
+		color: #03A9F4;
+	}
+	.login-icon {
+		text-align: center;
+	}
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: transparent;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+	nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #fff; 
+	}
+	nav ul ul li a {
+		font-size: 15px;
+	}
+	ul.inner-ul{
+		padding: 0!important;
+	}
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+.user span.fa {
+    font-size: 25px;
+    color: #fff;
+}
+/*-- //header --*/
+
+
+/*-- banner --*/
+.banner {
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+	position: relative;
+}
+.banner:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+	background: #333;
+}
+.slider-info {
+    position: relative;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.pvt-logo h2 {
+    color: #fff;
+    display: inline-block;
+    font-size: 3.5em;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+}
+.pvt-logo p {
+    color: #fff;
+}
+
+.slider-info a.btn {
+    background: none;
+    padding: 12px 30px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.slider-info a.btn:hover {
+	opacity: .8;
+}
+.banner-text {
+    padding: 15vw 0 13vw;
+}
+.banner ul.social li {
+    display: inline-block;
+    margin: 8px;
+}
+.banner  ul.social li  a{
+    font-size: 16px;
+    color: #eee;
+    line-height: 26px;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+/*-- //banner --*/
+
+/*-- popup --*/
+.popup-effect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+
+.popup-effect:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    background: #fff;
+    border-radius: 4px;
+    max-width: 500px;
+    position: relative;
+    margin: 8em auto;
+    padding: 3em 2em;
+    z-index: 999;
+}
+.popup p {
+    color: #777;
+    font-size: 15px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.popup .close:hover {
+    color: #03A9F4;
+}
+/*-- //popup --*/
+
+/*-- about -*/
+
+h3.heading {
+    font-size: 50px;
+    font-weight: 600;
+}
+.about-left span {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #03A9F4;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.about-icon span.fa,.about-icon1 span.fa,.about-icon2 span.fa {
+    background: #edf3fe;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 26px;
+}
+.about-icon span.fa {
+    color: #30c39e;
+}
+.about-icon1 span.fa {
+    color: #f85a40;
+}
+.about-icon2 span.fa {
+    color: #0389ff;
+}
+.about-grids h3 {
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 29px;
+}
+/*-- //about -*/
+
+/*-- services --*/
+.services{
+    background: #edf3fe;
+}
+.serv-grids {
+    background: #fff;
+    border-radius: 5px;
+    padding: 2em 1em;
+    text-align: center;
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, .1);
+}
+
+.grid1-margin {
+    margin-top: 6em;
+}
+.grid2-margin {
+    margin-top: 3em;
+}
+.serv-grids h3 {
+    color: #333;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 29px;
+}
+.serv-right h4 {
+    color: #333;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 34px;
+}
+.serv-grids span.fa{
+	font-size:30px;
+}
+.icon1-color span.fa{
+	color: #fd5c63;
+}
+.icon2-color span.fa{
+	color: #8e43e7;
+}
+.icon3-color span.fa{
+	color: #ea1d5d;
+}
+.icon4-color{
+	color: #00aeff;
+}
+.icon5-color span.fa{
+	color: #1cc7d0;
+}
+.icon6-color span.fa{
+	color: #0389ff;
+}
+/*-- //services --*/
+
+
+/*-- how we work --*/
+.how-grid h3 {
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 32px;
+}
+
+.how-icon span.fa,.how-icon1 span.fa,.how-icon2 span.fa,.how-icon3 span.fa {
+    background: #edf3fe;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.how-icon span.fa {
+    color: #30c39e;
+}
+.how-icon1 span.fa {
+    color: #f85a40;
+}
+.how-icon2 span.fa {
+    color: #0389ff;
+}
+.how-icon3 span.fa {
+    color: #8e43e7;
+}
+/*-- how we work --*/
+
+
+/*-- team --*/
+.team{
+	background: #f8f9fa;
+}
+h3.team_name {
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 32px;
+}
+span.team_role {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    color: #707579;
+}
+h4.team_phone {
+    font-size: 22px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 32px;
+    color: #777;
+}
+h4.team_phone span.fa{
+    color: #03A9F4;
+}
+.team_info {
+    text-align: center;
+}
+.team span.info {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #03A9F4;
+    font-size: 16px;
+}
+/*-- //team --*/
+
+/*-- section --*/
+.section h3 {
+    font-size: 26px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 32px;
+    color: #fff;
+}
+.section .layer {
+    background: rgba(51, 51, 51, 0.5);
+}
+section#section {
+    background: #00BCD4;
+    background: url(../images/bg.jpg) no-repeat 0px 0px;
+    background-size: cover;
+	background-attachment: fixed;
+}
+/*-- //section --*/
+
+/*-- call --*/
+.call-grids a {
+    background: none;
+    color: #fff;
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.call-grids  h4,.call-grids  p {
+    color: #fff;
+}
+.call-grids span.fa {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 8px;
+}
+/*-- //call --*/
+
+/*-- register popup style --*/
+.login h5 {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.login input[type="text"], .login input[type="email"], .login input[type="password"] {
+    padding: 10px 15px;
+}
+.login p a {
+    font-size: 15px;
+    color: #03A9F4;
+}
+.login .custom-select {
+    height: calc(3rem + 2px);
+}
+.login button.btn {
+    background: #03A9F4;
+    font-size: 15px;
+    display: inline-block;
+    color: #fff;
+    border: 2px solid;
+    padding: 8px 35px;
+    border: 2px solid #03A9F4;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/*-- register popup style --*/
+
+/*-- contact --*/
+.contact-left span {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #03A9F4;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.contact input[type="text"], .contact input[type="email"], .contact select, .contact textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+    background-color: transparent;
+    text-transform: capitalize;
+    background-image: none;
+    letter-spacing: 1px;
+    -webkit-appearance: none;
+    transition: .3s ease-in-out;
+    border: 1px solid #ccc;
+}
+.contact textarea {
+    height: 120px;
+}
+.contact input[type="submit"] {
+    background: #03A9F4;
+    font-size: 15px;
+    display: inline-block;
+    color: #fff;
+    border: 2px solid;
+    padding: 10px 40px;
+	border: 2px solid #03A9F4;
+    letter-spacing: 2px;
+    margin-top: 0px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.contact iframe{
+	border:none;
+	outline: none;
+	height:310px;
+	width:100%;
+	border: 5px solid #eee;	
+	padding: 3px;
+}
+.phone-icon {
+    text-align: center;
+}
+/*-- //contact --*/
+
+/*-- footer --*/
+footer {
+    background: #212020;
+	position:relative;
+}
+
+.footer-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #ddd;
+}
+.footer-title span.fa{
+    color: #03A9F4;
+}
+.contact-info p span {
+    display: block;
+}
+
+.footer-style-w3lsp a {
+    color: #999;
+}
+
+.contact-info h4 {
+    color: #333;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    line-height: 29px;
+}
+.contact-info h4 i {
+    color: #999;
+}
+.footer-style-w3ls p a {
+    color: #03A9F4;
+    text-decoration: underline;
+}
+/* quick links */
+ul.links li a {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #777;
+}
+
+ul.links li a:hover,
+.footer-style-w3lsp a:hover {
+    color: #fff;
+}
+ul.footer-links li{
+    margin: 0 10px;
+    display: inline-block;
+}
+ul.footer-links {
+    text-align: right;
+}
+ul.social li {
+    margin: 0 5px;
+    display: inline-block;
+}
+ul.social li a {
+    font-size: 13px;
+    color: #555;
+    background: #292929;
+    width: 35px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+.footer-right{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+/* //quick links */
+
+/* copyright */
+.copy-right {
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.copy-right a {
+    color: #999;
+}
+
+.copy-right a:hover {
+    color: #fff;
+}
+
+.copy-right-top {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* copyright */
+/* //footer */
+
+
+/*-- TO TOP --*/
+a.move-top span {
+    color: #666;
+    position: absolute;
+    z-index: 9;
+    left: 49%;
+    bottom: 16%;
+    height: unset;
+    font-size: 25px;
+}
+/*-- // TO TOP --*/
+
+/*-- Responsive design --*/
+
+@media(max-width:1080px) {
+	.pvt-logo h2 {
+		font-size: 3em;
+	}
+	.section h3 {
+		font-size: 22px;
+	}
+	.about-icon span.fa, .about-icon1 span.fa, .about-icon2 span.fa {
+		width: 68px;
+		height: 68px;
+		line-height: 68px;
+		font-size: 22px;
+	}
+	.contact-info h4 {
+		font-size: 20px;
+	}
+}
+
+@media(max-width:991px) {
+	.footer-right {
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	p.copy-right{
+		text-align: center;
+		margin-top: 10px;
+	}
+	a.move-top span {
+		bottom: 18%;
+	}
+	.slider-info {
+		width: 90%;
+	}
+	.banner-text {
+		padding: 23vw 0 13vw;
+	}
+}
+
+@media(max-width:736px) {
+	.slider-info {
+		width: 100%;
+	}
+	.pvt-logo h2 {
+		font-size: 2.4em;
+	}
+	h3.heading {
+		font-size: 45px;
+	}
+}
+@media(max-width:568px) {
+	.about-left span,.team span.info,.contact-left span {
+		font-size: 14px;
+	}
+	ul.footer-links {
+		text-align: center;
+	}
+	ul.social {
+		text-align: center;
+		margin-top: 5px;
+	}
+	a.move-top span {
+		position: static;
+	}
+	.to-top-center {
+		text-align: center;
+	}
+	.banner-text {
+		padding: 25vw 0 13vw;
+	}
+	.grid2-margin {
+		margin: .5em 0;
+	}
+	.grid1-margin {
+		margin-top: 0em;
+	}
+	.grid1-margin,.grid2-margin,.grid3-margin {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+}
+@media(max-width:480px) {
+	.pvt-logo h2 {
+		font-size: 2em;
+	}
+	.slider-info a.btn {
+		padding: 10px 25px;
+		font-size: 14px;
+	}
+	.banner-text {
+		padding: 30vw 0 13vw;
+	}
+	.popup {
+		margin: 8em 1em;
+		padding: 2em 1em;
+	}
+	.popup-register {
+		padding: 3em 2em;
+	}
+	.popup .close {
+		top: 0px;
+	}
+}
+@media(max-width:414px) {
+	.footer-title {
+		font-size: 17px;
+	}
+	.serv-right h4 {
+		font-size: 21px;
+	}
+	.pvt-logo p {
+		font-size: 15px;
+	}
+	.how-grid h3 {
+		font-size: 20px;
+	}
+	.call-grids span.fa {
+		font-size: 40px;
+	}
+	.call-grids h4 {
+		font-size: 19px;
+		letter-spacing: 1px;
+	}
+	#logo a {
+		font-size: .7em;
+	}
+	.banner-text {
+		padding: 35vw 0 13vw;
+	}
+	h3.heading {
+		font-size: 35px;
+	}
+	.about-grids h3 {
+		font-size: 20px;
+	}
+	.serv-grids h3,h3.team_name {
+		font-size: 20px;
+	}
+	span.team_role {
+		font-size: 16px;
+	}
+	h4.team_phone {
+		font-size: 20px;
+	}
+}
+@media(max-width:384px) {
+	.slider-info a.btn {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+	.serv-right h4 {
+		font-size: 19px;
+	}
+	ul.links li a {
+		font-size: 14.5px;
+		letter-spacing: .5px;
+	}
+	.login h5 {
+		font-size: 21px;
+	}
+	.login p a {
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	.about-left span, .team span.info, .contact-left span {
+		padding-left: 5px;
+	}
+}
+@media(max-width:375px) {
+	.pvt-logo h2 {
+		font-size: 1.8em;
+	}
+	#logo a {
+		font-size: .65em;
+	}
+	.login-icon a {
+		padding: 12px 20px;
+		font-size: 13px;
+	}
+	.toggle {
+		padding: 4px 15px;
+	}
+	.login h5 {
+		font-size: 20px;
+		letter-spacing: 0px;
+	}
+	.banner-text {
+		padding: 40vw 0 13vw;
+	}
+	.about-grids h3 {
+		font-size: 18px;
+	}
+	.how-grid h3 {
+		font-size: 17px;
+	}
+}
+@media(max-width:320px) {
+	.slider-info a.btn {
+		padding: 10px 15px;
+		font-size: 13px;
+		letter-spacing: 1px;
+	}
+	.section h3 {
+		font-size: 20px;
+	}
+	p {
+		font-size: 15px;
+	}
+	.contact input[type="text"], .contact input[type="email"], .contact select, .contact textarea {
+		font-size: 15px;
+	}
+	.footer-title {
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+}
+.container h2{
+    margin-top:40px;
+}
+.container .add{
+    float:right;
+}
+/*-- //Responsive design --*/
