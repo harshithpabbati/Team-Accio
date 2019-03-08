@@ -70,14 +70,13 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-Harshith Pabbathi
-Puneeth Chanda
-Amit Rja
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Harshith Pabbati <br />
+Puneeth Chanda <br />
+Amit Raja <br />
 
 ## License
 
-This project is licensed under the team Accio
+This project is licensed under the Team Accio
 
 ## Acknowledgments
 
