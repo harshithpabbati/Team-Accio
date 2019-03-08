@@ -1,6 +1,5 @@
-# Project Title
+# Mail Room project for college
 
-Mail Room project for college
 
 ## Getting Started
 
