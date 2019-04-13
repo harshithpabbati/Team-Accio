@@ -163,15 +163,11 @@ Distinguished professors and scholars share their knowledge and experiences with
 			<h5 class=" mb-4">Sign up to create an account</h5>
 			<form action="/dashboard" method="post">
 				<div class="form-group">
-					<input type="text" class="form-control" name="fullname" placeholder="Full Name" required="">
+					<input type="text" class="form-control" name="email" placeholder="Email Id" required="">
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" name="number" placeholder="Phone Number" required="">
 				</div>
-				<div class="form-group">
-					<input type="email" class="form-control" name="email" placeholder="Email Id" required="">
-				</div>
-
 				<div class="form-group">
 					<input type="password" class="form-control" name="password" placeholder="Password" required="">
 				</div>
@@ -183,8 +179,7 @@ Distinguished professors and scholars share their knowledge and experiences with
 				</div>
 				<center><button type="submit" class="btn btn-primary submit">Sign Up</button></center>
 				<p class="text-center">Already have an account? 
-					<a href="#popup-signin">Sign In</a><br />
-					<a href="/auth/google">Sign In with Google</a>
+					<a href="#popup-signin">Sign In</a>
 				</p>
 			</form>
 		</div>
@@ -201,7 +196,7 @@ Distinguished professors and scholars share their knowledge and experiences with
 		<div class="login px-sm-4 mx-auto mw-100">
 			<h5 class=" mb-4">Sign In to your account</h5>
 			<p class="mb-3">Enter your Credidentals </p>
-			<form action="/login" method="post">
+			<form action="/login" method="POST">
 				<div class="form-group">
 					<input type="email" class="form-control" id="validation" placeholder="Email Id" required="">
 				</div>
@@ -209,7 +204,7 @@ Distinguished professors and scholars share their knowledge and experiences with
 				<div class="form-group">
 					<input type="password" class="form-control" id="password2" placeholder="Password" required="">
 				</div>
-				<center><a href="/dashboardadmins" class="btn btn-primary" role="button">Login</a></center>
+				<center><button type ="submit" class="btn btn-primary" role="button">Login</a></center>
 			</form>
 		</div>
 		<a class="close" href="#">&times;</a>
