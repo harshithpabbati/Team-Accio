@@ -1154,10 +1154,10 @@ body {
         vertical-align: middle;
     }
     table.table tr th:first-child {
-        width: 60px;
+        width: 200px;
     }
     table.table tr th:last-child {
-        width: 100px;
+        width: 200px;
     }
     table.table-striped tbody tr:nth-of-type(odd) {
         background-color: #fcfcfc;

@@ -37,7 +37,7 @@
 		<!-- nav -->
 		<nav class="py-4 d-lg-flex">
 			<div id="logo">
-				<h1> <a href="index.html"><span class="fa fa-clone"></span> Mail Room Services</a></h1>
+				<h1> <a href="index.html"> Mail Room Services</a></h1>
 			</div>
 			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />
@@ -166,7 +166,7 @@ Distinguished professors and scholars share their knowledge and experiences with
 					<input type="text" class="form-control" name="email" placeholder="Email Id" required="">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" name="number" placeholder="Phone Number" required="">
+					<input type="text" class="form-control" name="username" placeholder="Username" required="">
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" name="password" placeholder="Password" required="">
@@ -175,7 +175,10 @@ Distinguished professors and scholars share their knowledge and experiences with
 					<input type="password" class="form-control" name="reenterpassword" placeholder="Re-Enter Password" required="">
 				</div>
 				<div class="form-group">
-					<input type="Roll-No" class="form-control" id="rollno" placeholder="Roll-No" required="">
+					<input type="text" class="form-control" name="number" placeholder="Phone Number" required="">
+				</div>
+				<div class="form-group">
+					<input type="Roll-No" class="form-control" name="rollno" placeholder="Roll-No" required="">
 				</div>
 				<center><button type="submit" class="btn btn-primary submit">Sign Up</button></center>
 				<p class="text-center">Already have an account? 
@@ -198,11 +201,11 @@ Distinguished professors and scholars share their knowledge and experiences with
 			<p class="mb-3">Enter your Credidentals </p>
 			<form action="/login" method="POST">
 				<div class="form-group">
-					<input type="email" class="form-control" id="validation" placeholder="Email Id" required="">
+					<input type="text" class="form-control" name="username" placeholder="Username" required="">
 				</div>
 
 				<div class="form-group">
-					<input type="password" class="form-control" id="password2" placeholder="Password" required="">
+					<input type="password" class="form-control" name="password" placeholder="Password" required="">
 				</div>
 				<center><button type ="submit" class="btn btn-primary" role="button">Login</a></center>
 			</form>
