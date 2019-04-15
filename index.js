@@ -1,6 +1,5 @@
 var express = require("express");
 var app = express();
-var port = 8000;
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 
@@ -83,6 +82,6 @@ app.post("/packages", (req,res) => {
         return res.redirect('/dashboardadmins');
     })     
 })
-app.listen(port, () => {
-    console.log("Server listening on port " + port);
+app.listen(process.env.PORT || 8000, () => {
+    console.log(`Server running at port 8000`);
 });
