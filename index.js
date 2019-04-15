@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/Team-Accio");
 var User = require('./models/user');
+var Package = require('./models/package');
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/images'));
@@ -60,6 +61,28 @@ app.post("/login", (req,res)=>{
         return res.redirect('/dashboardadmins');
     })
 });
+app.post("/packages", (req,res) => {
+    var email = req.body.email; 
+    var packageid = req.body.packageid;
+    var rollno = req.body.rollno;
+    var couriername = req.body.couriername;
+    var status = req.body.status;
+
+    var newpackage = new Package();
+    newpackage.email = email;
+    newpackage.packageid = packageid;
+    newpackage.rollno = rollno;
+    newpackage.couriername = couriername;
+    newpackage.status = status;
+    newpackage.save(function(err,savedUser){
+        if(err){
+            console.log(err);
+            return res.status(500).send();
+        }
+
+        return res.redirect('/dashboardadmins');
+    })     
+})
 app.listen(port, () => {
     console.log("Server listening on port " + port);
 });
