@@ -1,4 +1,4 @@
-# Mail Room project for college
+# Mail Room project.
 
 
 ## Getting Started
