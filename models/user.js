@@ -5,8 +5,7 @@ UserSchema = new Schema({
     email: String,
     username: String,
     number: Number,
-    password: String,
-    rollno: String
+    password: String
 });
 User = mongoose.model("users", UserSchema);
 

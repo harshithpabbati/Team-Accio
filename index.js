@@ -5,6 +5,8 @@ var mongoose = require("mongoose");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/Team-Accio");
@@ -17,34 +19,13 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 app.get("/dashboardadmins",(req,res) =>{
-    res.sendFile(__dirname+ "/dashboard.html");
+    res.render('dashboard');
 });
+
 app.get("/dashboardforstudents",(req,res) =>{
     res.sendFile(__dirname+ "/dashboardforstudents.html");
 });
-app.post("/dashboard", (req, res) => {
-    var email = req.body.email; 
-    var username = req.body.username;
-    var number = req.body.number;
-    var password = req.body.password;
-    var rollno = req.body.rollno;
 
-    var newuser = new User();
-    newuser.email = email;
-    newuser.username = username;
-    newuser.number = number;
-    newuser.password = password;
-    newuser.rollno = rollno;
-    newuser.save(function(err,savedUser){
-        if(err){
-            console.log(err);
-            return res.status(500).send();
-        }
-
-        return res.redirect('/dashboardadmins');
-    }) 
-
-});
 app.post("/login", (req,res)=>{
     var username = req.body.username;
     var password = req.body.password;
@@ -81,7 +62,7 @@ app.post("/packages", (req,res) => {
 
         return res.redirect('/dashboardadmins');
     })     
-})
+});
 app.listen(process.env.PORT || 8000, () => {
     console.log(`Server running at port 8000`);
 });
