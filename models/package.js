@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 PackageSchema = new Schema({
-    email: String,
-    packageid: String,
+    name: String,
     rollno: String,
     couriername : String,
     status: String

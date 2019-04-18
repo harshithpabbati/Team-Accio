@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
 
 
 mongoose.Promise = global.Promise;
@@ -19,13 +19,17 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 app.get("/dashboardadmins",(req,res) =>{
-    res.render('dashboard');
+    Package.find({},function(err,docs){
+        if(err) res.json(err);
+        else res.render('dashboard.jade',{packages:docs})
+    });
 });
-
-app.get("/dashboardforstudents",(req,res) =>{
-    res.sendFile(__dirname+ "/dashboardforstudents.html");
+app.get('/dashboard',(req,res) =>{
+    Package.find({},function(err,docs){
+        if(err) res.json(err);
+        else res.render('dashboardstd.jade',{packages:docs})
+    });
 });
-
 app.post("/login", (req,res)=>{
     var username = req.body.username;
     var password = req.body.password;
@@ -42,19 +46,17 @@ app.post("/login", (req,res)=>{
     })
 });
 app.post("/packages", (req,res) => {
-    var email = req.body.email; 
-    var packageid = req.body.packageid;
+    var name = req.body.name; 
     var rollno = req.body.rollno;
     var couriername = req.body.couriername;
     var status = req.body.status;
 
     var newpackage = new Package();
-    newpackage.email = email;
-    newpackage.packageid = packageid;
+    newpackage.name = name;
     newpackage.rollno = rollno;
     newpackage.couriername = couriername;
     newpackage.status = status;
-    newpackage.save(function(err,savedUser){
+    newpackage.save(function(err,pack){
         if(err){
             console.log(err);
             return res.status(500).send();
