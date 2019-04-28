@@ -1,19 +1,22 @@
 ![mail-room-service](https://raw.githubusercontent.com/Harshithpabbati/Team-Accio/master/images/mail.png)
 # Mail Room Service
 
-### Installing
-You need to have the latest version of Nodejs and mongodb.
-Install the required npm packages
+### Installation
+Make sure that you have the latest version of Node js and Mongo DB.
 
-```
-npm install
-```
+Follow the steps :)
 
-Run the demo
+* Install the required npm packages
 
-```
-npm start
-```
+    ```
+    npm install
+    ```
+
+* Run the demo
+
+    ```
+    npm start
+    ```
 
 ## Built With
 
