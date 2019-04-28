@@ -1,5 +1,7 @@
 # Mail Room project.
-
+[![Watchers][watchers-badge]][watchers]
+[![Star Gazers][stars-badge]][stargazers]
+[![Forks][forks-badge]][forks]
 
 ## Getting Started
 
