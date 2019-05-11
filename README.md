@@ -1,7 +1,7 @@
 ![mail-room-service](https://raw.githubusercontent.com/Harshithpabbati/Team-Accio/master/images/mail.png)
-# Mail Room Service
+# Mail Room Service :fire:
 
-### Installation
+### Installation Guide
 Make sure that you have the latest version of Node js and Mongo DB.
 
 Follow the steps :)
@@ -18,15 +18,18 @@ Follow the steps :)
     npm start
     ```
 
-## Built With
+## :electric_plug: Tech Stack
 
 * [Node js](https://nodejs.org/en/) - The web framework.
 * [Boot strap](https://getbootstrap.com/) -UI
 
-## Authors
-* Harshith Pabbati
-* Puneeth Chanda 
-* Amit Raja
+## :gem: Creaters
+1. [Harshith Pabbati](https://github.com/harshithpabbati)
+2. [Puneeth Chanda](https://github.com/puneeth2001)
+3. [Amit Raja](https://github.com/kalidindiamitraja)
+
+
+Contributions are welcome! <3
 
 ## License
 
