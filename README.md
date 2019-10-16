@@ -4,7 +4,7 @@
 ### Installation Guide
 Make sure that you have the latest version of Node js and Mongo DB.
 
-Follow the steps :)
+Follow the steps
 
 * Install the required npm packages
 
